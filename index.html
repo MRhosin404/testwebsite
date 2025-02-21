@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>what is today</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <canvas id='myCanvas' width='800' height='800'></canvas>
+        <audio id="fireworkSound" src="audio/firework boom.MP3" preload="auto"></audio>
+        <audio id="fireworkSooouu" src="audio/firework sooouuu.MP3" preload="auto"></audio>
+        <div class="firework-controls"
+            style="position: fixed; display: none; top: 10px; left: 10px; background: rgba(255, 255, 255, 0.8); padding: 10px; border-radius: 8px;">
+            <label>Firework Speed: <input type="range" id="speedControl" min="5" max="20" value="14"></label><br>
+            <label>Spark Size: <input type="range" id="sizeControl" min="1" max="10" value="1.4"></label><br>
+            <label>Color Intensity: <input type="range" id="colorControl" min="50" max="255" value="200"></label>
+        </div>
+        <div class="content">
+            <h1 class="h1"></h1>
+            <div class="time">
+                <span class="lastSecond">10</span>
+            </div>
+
+            <table class="">
+                <tr class="onet">
+                    <td class="year deletMe">0</td>
+                    <td class="month deletMe">0</td>
+                    <td class="days deletMe">0</td>
+                    <td class="hours deletMe">0</td>
+                    <td class="minite deletMe">0</td>
+                    <td class="second deletMe">0</td>
+                </tr>
+            </table>
+            <table class="title-table">
+                <tr class="twot">
+                    <td>year</td>
+                    <td>month</td>
+                    <td>days</td>
+                    <td>hours</td>
+                    <td>minute</td>
+                    <td>second</td>
+                </tr>
+            </table>
+            <hr class="meH deletMe">
+            <div class="image-section">
+                <div class="slider">
+                    <div class="slid_box"><img src="images/1.JPG"></div>
+                    <div class="slid_box"><img src="images/2.JPG"></div>
+                    <div class="slid_box"><img src="images/3.JPG"></div>
+                    <div class="slid_box"><img src="images/4.JPG"></div>
+                    <div class="slid_box"><img src="images/5.JPG"></div>
+                    <div class="slid_box"><img src="images/6.JPG"></div>
+                    <div class="slid_box"><img src="images/7.JPG"></div>
+                    <div class="slid_box"><img src="images/8.JPG"></div>
+
+                </div>
+                <h3 class="h3">🌼🎈🧁Happy Birthday my dear Brother [ Belayet ]🌼🌻</h3>
+            </div>
+        </div>
+    </div>
+    <div class="btn-box">
+        <button class="cleckme">cleck me to 🔊🎧</button>
+    </div>
+</body>
+<!-- jqueary -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<!-- //jqueary -->
+
+<!-- slick  -->
+<script type="text/javascript" src="slick-1.8.1/slick.min.js"></script>
+<script>
+    $('.slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        nextArrow: $('.next'),
+        prevArrow: $('.prev'),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+</script>
+<script src="js/script.js"></script>
+
+</html>
